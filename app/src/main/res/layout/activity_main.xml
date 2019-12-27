@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".MainActivity"
+                                             android:background="@android:color/darker_gray">
+
+
+    <TextView
+            android:text="SONUÇ:"
+            android:layout_width="0dp"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sonsonuc"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/girilenkilo" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/girilenkilo"
+              android:hint="Dünya'daki Kilonuzu Giriniz!"
+              android:layout_marginTop="80dp"
+              app:layout_constraintTop_toBottomOf="@+id/cbVenus" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.497"/>
+    <CheckBox
+            android:text="MARS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbMars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/cbVenus"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    <CheckBox
+            android:text="VENÜS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbVenus"
+            app:layout_constraintStart_toEndOf="@+id/cbMars" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/cbJupiter" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    <CheckBox
+            android:text="JÜPİTER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbJupiter"
+            app:layout_constraintStart_toEndOf="@+id/cbVenus" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="170dp" app:srcCompat="@drawable/saturn"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.0" android:scaleType="centerCrop"/>
+
+</android.support.constraint.ConstraintLayout>
